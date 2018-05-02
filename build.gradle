@@ -40,9 +40,9 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-amqp')
+    compile('org.springframework.shell:spring-shell-starter:2.0.1.RELEASE')
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile('com.github.GoosvandenBekerom:roulette.core:51dd5d6bb0')

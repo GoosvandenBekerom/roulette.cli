@@ -11,3 +11,6 @@ build/
 # Kotlin
 # Compiled class file
 *.class
+
+# Spring shell / log files
+*.log
