@@ -2,7 +2,9 @@ package com.goosvandenbekerom.roulette.cli
 
 import com.goosvandenbekerom.roulette.core.BetType
 import com.goosvandenbekerom.roulette.proto.RouletteProto.*
+import org.springframework.amqp.core.Queue
 import org.springframework.amqp.core.TopicExchange
+import org.springframework.amqp.rabbit.core.RabbitAdmin
 import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.Availability
@@ -15,15 +17,16 @@ class Client {
     @Autowired lateinit var rabbit: RabbitTemplate
     @Autowired lateinit var exchange: TopicExchange
 
-    private var playerId = -1
+    private var playerId: Long = -1
 
     @ShellMethod("Register a new player")
     fun newPlayer(@ShellOption("-u", "--username") username: String) {
-        val request = NewPlayerRequest.newBuilder()
-        request.name = username
-        rabbit.convertAndSend(exchange.name, RabbitConfig.DEALER_ROUTING_KEY, request.build())
-        playerId = 1 // TODO: get player id from response
-        println("Successfully established connection for $username")
+        val body = NewPlayerRequest.newBuilder()
+        body.name = username
+        println("Requesting registration for $username...")
+        val response = rabbit.convertSendAndReceive(exchange.name, RabbitConfig.DEALER_ROUTING_KEY, body.build()) as NewPlayerResponse
+        playerId = response.id
+        println("Successfully registered $username with player id: $playerId")
     }
 
     @ShellMethod("Bet on a game")
