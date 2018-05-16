@@ -1,10 +1,9 @@
 package com.goosvandenbekerom.roulette.cli
 
+import com.google.protobuf.Message
 import com.goosvandenbekerom.roulette.core.BetType
 import com.goosvandenbekerom.roulette.proto.RouletteProto.*
-import org.springframework.amqp.core.Queue
 import org.springframework.amqp.core.TopicExchange
-import org.springframework.amqp.rabbit.core.RabbitAdmin
 import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.shell.Availability
@@ -16,22 +15,35 @@ import org.springframework.shell.standard.ShellOption
 class Client {
     @Autowired lateinit var rabbit: RabbitTemplate
     @Autowired lateinit var exchange: TopicExchange
-
-    private var playerId: Long = -1
+    @Autowired lateinit var state: ClientState
 
     @ShellMethod("Register a new player")
     fun newPlayer(@ShellOption("-u", "--username") username: String) {
         val body = NewPlayerRequest.newBuilder()
         body.name = username
         println("Requesting registration for $username...")
-        val response = rabbit.convertSendAndReceive(exchange.name, RabbitConfig.DEALER_ROUTING_KEY, body.build()) as NewPlayerResponse
-        playerId = response.id
-        println("Successfully registered $username with player id: $playerId")
+        val response = request(body.build()) as NewPlayerResponse
+
+        state.connectPlayer(response.id)
+
+        println("Successfully registered and connected $username with player id: ${state.playerId}")
+    }
+
+    @ShellMethod("Buy some chips to bet on games")
+    fun buyIn(@ShellOption("-a", "--amount") amount: Int) {
+        val body = BuyInRequest.newBuilder()
+        body.playerId = state.playerId
+        body.amount = amount
+        println("Requesting buy-in for $amount chips")
+        val response = request(body.build()) as PlayerAmountUpdate
+
+        state.chipAmount = response.amount
+
+        println("Buy-in successful. new chip amount = ${state.chipAmount}")
     }
 
     @ShellMethod("Bet on a game")
-    fun bet(
-        @ShellOption("-g", "--game") gameId: Long,
+    fun bet( // TODO: FIX CONVERTER FOR NUMBER TYPES (NON NO-ARG CONSTRUCTOR TYPES)
         @ShellOption("-a", "--amount") amount: Int,
         @ShellOption("-t", "--type", valueProvider = BetTypeProvider::class) type: BetType,
         @ShellOption("-n1", "--number1", defaultValue = "-1") n1: Int,
@@ -41,33 +53,53 @@ class Client {
         @ShellOption("-n5", "--number5", defaultValue = "-1") n5: Int,
         @ShellOption("-n6", "--number6", defaultValue = "-1") n6: Int
     ){
-        val request = BetRequest.newBuilder()
-        request.gameId = gameId
-        request.amount = amount
-        request.type = betTypeToProto(type)
+        if (amount > state.chipAmount){
+            println("You don't have enough chips to make that bet. please buy-in first")
+            return
+        }
+
+        val body = BetRequest.newBuilder()
+        body.playerId = state.playerId
+        body.amount = amount
+        body.type = betTypeToProto(type)
         val numbers = setOf(n1, n2, n3, n4, n5, n6).filter { it in 0..37 }
         if (numbers.isNotEmpty()) {
-            request.addAllNumber(numbers)
+            body.addAllNumber(numbers)
         }
-        rabbit.convertAndSend(exchange.name, RabbitConfig.DEALER_ROUTING_KEY, request.build())
-        println("Betting $amount on ${type::class.simpleName} in game $gameId")
+        println("Betting $amount on ${type::class.simpleName}")
+        val response = request(body.build()) as PlayerAmountUpdate
+
+        state.chipAmount = response.amount
+
+        println("Bet successful. new chip amount = ${state.chipAmount}")
     }
 
     // ======================
     // Availability functions
     // ======================
 
-    fun betAvailability(): Availability{
-        return if (playerConnected()) Availability.available()
-        else Availability.unavailable("no player is connected/registered")
+    fun betAvailability() = playerAvailable(true)
+    fun buyInAvailability() = playerAvailable()
+
+    fun playerAvailable(shouldHaveChips: Boolean = false): Availability {
+        return if (!playerConnected())
+            Availability.unavailable("no player is connected/registered, register one with 'new-player [name]'")
+        else if (shouldHaveChips && state.chipAmount <= 0)
+            Availability.unavailable("you don't own any chips, please buy-in first")
+        else
+            Availability.available()
     }
 
     // =================
     // Private functions
     // =================
 
+    private fun request(body: Message) : Message {
+        return rabbit.convertSendAndReceive(exchange.name, RabbitConfig.DEALER_ROUTING_KEY, body) as Message
+    }
+
     private fun playerConnected(): Boolean {
-        return playerId > -1
+        return state.playerId > -1
     }
 
     private fun betTypeToProto(type: BetType): BetRequest.BetType {

@@ -23,7 +23,6 @@ class ProtoMessageConverter : AbstractMessageConverter() {
     override fun fromMessage(message: Message): com.google.protobuf.Message {
         return when(message.messageProperties.headers[ProtoMessage.TYPE_KEY]) {
             NewPlayerResponse::class.java.simpleName -> NewPlayerResponse.parseFrom(message.body)
-            NewGame::class.java.simpleName -> NewGame.parseFrom(message.body)
             NewResult::class.java.simpleName -> NewResult.parseFrom(message.body)
             PlayerAmountUpdate::class.java.simpleName -> PlayerAmountUpdate.parseFrom(message.body)
             else -> throw UnsupportedMessageException(message)

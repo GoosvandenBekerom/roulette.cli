@@ -20,7 +20,7 @@ public final class RouletteProto {
     /**
      * <code>string name = 1;</code>
      */
-    String getName();
+    java.lang.String getName();
     /**
      * <code>string name = 1;</code>
      */
@@ -43,7 +43,7 @@ public final class RouletteProto {
       name_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -54,7 +54,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -75,7 +75,7 @@ public final class RouletteProto {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -97,7 +97,7 @@ public final class RouletteProto {
       return RouletteProto.internal_static_NewPlayerRequest_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_NewPlayerRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -105,18 +105,18 @@ public final class RouletteProto {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile Object name_;
+    private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
      */
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
@@ -126,11 +126,11 @@ public final class RouletteProto {
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -169,8 +169,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -186,7 +186,7 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -282,9 +282,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -300,7 +300,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_NewPlayerRequest_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_NewPlayerRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -313,7 +313,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -358,7 +358,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -371,12 +371,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -421,20 +421,20 @@ public final class RouletteProto {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -442,11 +442,11 @@ public final class RouletteProto {
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
-        Object ref = name_;
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -457,11 +457,11 @@ public final class RouletteProto {
        * <code>string name = 1;</code>
        */
       public Builder setName(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         name_ = value;
         onChanged();
         return this;
@@ -470,7 +470,7 @@ public final class RouletteProto {
        * <code>string name = 1;</code>
        */
       public Builder clearName() {
-
+        
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
@@ -484,7 +484,7 @@ public final class RouletteProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         name_ = value;
         onChanged();
         return this;
@@ -527,7 +527,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<NewPlayerRequest> getParserForType() {
       return PARSER;
     }
@@ -563,7 +563,7 @@ public final class RouletteProto {
       id_ = 0L;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -574,7 +574,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -616,7 +616,7 @@ public final class RouletteProto {
       return RouletteProto.internal_static_NewPlayerResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_NewPlayerResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -664,8 +664,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -681,7 +681,7 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -778,9 +778,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -796,7 +796,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_NewPlayerResponse_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_NewPlayerResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -809,7 +809,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -854,7 +854,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -867,12 +867,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -927,7 +927,7 @@ public final class RouletteProto {
        * <code>int64 id = 1;</code>
        */
       public Builder setId(long value) {
-
+        
         id_ = value;
         onChanged();
         return this;
@@ -936,7 +936,7 @@ public final class RouletteProto {
        * <code>int64 id = 1;</code>
        */
       public Builder clearId() {
-
+        
         id_ = 0L;
         onChanged();
         return this;
@@ -979,7 +979,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<NewPlayerResponse> getParserForType() {
       return PARSER;
     }
@@ -1021,7 +1021,7 @@ public final class RouletteProto {
       amount_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1032,7 +1032,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1079,7 +1079,7 @@ public final class RouletteProto {
       return RouletteProto.internal_static_BuyInRequest_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_BuyInRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -1143,8 +1143,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -1162,7 +1162,7 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1261,9 +1261,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1279,7 +1279,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_BuyInRequest_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_BuyInRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1292,7 +1292,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1340,7 +1340,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1353,12 +1353,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1416,7 +1416,7 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder setPlayerId(long value) {
-
+        
         playerId_ = value;
         onChanged();
         return this;
@@ -1425,7 +1425,7 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder clearPlayerId() {
-
+        
         playerId_ = 0L;
         onChanged();
         return this;
@@ -1442,7 +1442,7 @@ public final class RouletteProto {
        * <code>int32 amount = 2;</code>
        */
       public Builder setAmount(int value) {
-
+        
         amount_ = value;
         onChanged();
         return this;
@@ -1451,7 +1451,7 @@ public final class RouletteProto {
        * <code>int32 amount = 2;</code>
        */
       public Builder clearAmount() {
-
+        
         amount_ = 0;
         onChanged();
         return this;
@@ -1494,7 +1494,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<BuyInRequest> getParserForType() {
       return PARSER;
     }
@@ -1515,11 +1515,6 @@ public final class RouletteProto {
     long getPlayerId();
 
     /**
-     * <code>int64 game_id = 2;</code>
-     */
-    long getGameId();
-
-    /**
      * <code>int32 amount = 3;</code>
      */
     int getAmount();
@@ -1536,7 +1531,7 @@ public final class RouletteProto {
     /**
      * <code>repeated int32 number = 5;</code>
      */
-    java.util.List<Integer> getNumberList();
+    java.util.List<java.lang.Integer> getNumberList();
     /**
      * <code>repeated int32 number = 5;</code>
      */
@@ -1560,13 +1555,12 @@ public final class RouletteProto {
     }
     private BetRequest() {
       playerId_ = 0L;
-      gameId_ = 0L;
       amount_ = 0;
       type_ = 0;
       number_ = java.util.Collections.emptyList();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1577,7 +1571,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1602,11 +1596,6 @@ public final class RouletteProto {
               playerId_ = input.readInt64();
               break;
             }
-            case 16: {
-
-              gameId_ = input.readInt64();
-              break;
-            }
             case 24: {
 
               amount_ = input.readInt32();
@@ -1619,9 +1608,9 @@ public final class RouletteProto {
               break;
             }
             case 40: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                number_ = new java.util.ArrayList<Integer>();
-                mutable_bitField0_ |= 0x00000010;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                number_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
               }
               number_.add(input.readInt32());
               break;
@@ -1629,9 +1618,9 @@ public final class RouletteProto {
             case 42: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010) && input.getBytesUntilLimit() > 0) {
-                number_ = new java.util.ArrayList<Integer>();
-                mutable_bitField0_ |= 0x00000010;
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
+                number_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
               }
               while (input.getBytesUntilLimit() > 0) {
                 number_.add(input.readInt32());
@@ -1647,7 +1636,7 @@ public final class RouletteProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           number_ = java.util.Collections.unmodifiableList(number_);
         }
         this.unknownFields = unknownFields.build();
@@ -1659,7 +1648,7 @@ public final class RouletteProto {
       return RouletteProto.internal_static_BetRequest_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_BetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -1822,7 +1811,7 @@ public final class RouletteProto {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -1831,7 +1820,7 @@ public final class RouletteProto {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @Deprecated
+      @java.lang.Deprecated
       public static BetType valueOf(int value) {
         return forNumber(value);
       }
@@ -1890,7 +1879,7 @@ public final class RouletteProto {
       public static BetType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new IllegalArgumentException(
+          throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -1916,15 +1905,6 @@ public final class RouletteProto {
      */
     public long getPlayerId() {
       return playerId_;
-    }
-
-    public static final int GAME_ID_FIELD_NUMBER = 2;
-    private long gameId_;
-    /**
-     * <code>int64 game_id = 2;</code>
-     */
-    public long getGameId() {
-      return gameId_;
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 3;
@@ -1953,11 +1933,11 @@ public final class RouletteProto {
     }
 
     public static final int NUMBER_FIELD_NUMBER = 5;
-    private java.util.List<Integer> number_;
+    private java.util.List<java.lang.Integer> number_;
     /**
      * <code>repeated int32 number = 5;</code>
      */
-    public java.util.List<Integer>
+    public java.util.List<java.lang.Integer>
         getNumberList() {
       return number_;
     }
@@ -1991,9 +1971,6 @@ public final class RouletteProto {
       if (playerId_ != 0L) {
         output.writeInt64(1, playerId_);
       }
-      if (gameId_ != 0L) {
-        output.writeInt64(2, gameId_);
-      }
       if (amount_ != 0) {
         output.writeInt32(3, amount_);
       }
@@ -2018,10 +1995,6 @@ public final class RouletteProto {
       if (playerId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, playerId_);
-      }
-      if (gameId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, gameId_);
       }
       if (amount_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -2050,8 +2023,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -2063,8 +2036,6 @@ public final class RouletteProto {
       boolean result = true;
       result = result && (getPlayerId()
           == other.getPlayerId());
-      result = result && (getGameId()
-          == other.getGameId());
       result = result && (getAmount()
           == other.getAmount());
       result = result && type_ == other.type_;
@@ -2074,7 +2045,7 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2084,9 +2055,6 @@ public final class RouletteProto {
       hash = (37 * hash) + PLAYER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPlayerId());
-      hash = (37 * hash) + GAME_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getGameId());
       hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + getAmount();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
@@ -2182,9 +2150,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2200,7 +2168,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_BetRequest_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_BetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2213,7 +2181,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2226,14 +2194,12 @@ public final class RouletteProto {
         super.clear();
         playerId_ = 0L;
 
-        gameId_ = 0L;
-
         amount_ = 0;
 
         type_ = 0;
 
         number_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -2259,12 +2225,11 @@ public final class RouletteProto {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.playerId_ = playerId_;
-        result.gameId_ = gameId_;
         result.amount_ = amount_;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           number_ = java.util.Collections.unmodifiableList(number_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.number_ = number_;
         result.bitField0_ = to_bitField0_;
@@ -2277,7 +2242,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2290,12 +2255,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2312,9 +2277,6 @@ public final class RouletteProto {
         if (other.getPlayerId() != 0L) {
           setPlayerId(other.getPlayerId());
         }
-        if (other.getGameId() != 0L) {
-          setGameId(other.getGameId());
-        }
         if (other.getAmount() != 0) {
           setAmount(other.getAmount());
         }
@@ -2324,7 +2286,7 @@ public final class RouletteProto {
         if (!other.number_.isEmpty()) {
           if (number_.isEmpty()) {
             number_ = other.number_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureNumberIsMutable();
             number_.addAll(other.number_);
@@ -2370,7 +2332,7 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder setPlayerId(long value) {
-
+        
         playerId_ = value;
         onChanged();
         return this;
@@ -2379,34 +2341,8 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder clearPlayerId() {
-
+        
         playerId_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long gameId_ ;
-      /**
-       * <code>int64 game_id = 2;</code>
-       */
-      public long getGameId() {
-        return gameId_;
-      }
-      /**
-       * <code>int64 game_id = 2;</code>
-       */
-      public Builder setGameId(long value) {
-
-        gameId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 game_id = 2;</code>
-       */
-      public Builder clearGameId() {
-
-        gameId_ = 0L;
         onChanged();
         return this;
       }
@@ -2422,7 +2358,7 @@ public final class RouletteProto {
        * <code>int32 amount = 3;</code>
        */
       public Builder setAmount(int value) {
-
+        
         amount_ = value;
         onChanged();
         return this;
@@ -2431,7 +2367,7 @@ public final class RouletteProto {
        * <code>int32 amount = 3;</code>
        */
       public Builder clearAmount() {
-
+        
         amount_ = 0;
         onChanged();
         return this;
@@ -2466,7 +2402,7 @@ public final class RouletteProto {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        
         type_ = value.getNumber();
         onChanged();
         return this;
@@ -2475,23 +2411,23 @@ public final class RouletteProto {
        * <code>.BetRequest.BetType type = 4;</code>
        */
       public Builder clearType() {
-
+        
         type_ = 0;
         onChanged();
         return this;
       }
 
-      private java.util.List<Integer> number_ = java.util.Collections.emptyList();
+      private java.util.List<java.lang.Integer> number_ = java.util.Collections.emptyList();
       private void ensureNumberIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          number_ = new java.util.ArrayList<Integer>(number_);
-          bitField0_ |= 0x00000010;
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          number_ = new java.util.ArrayList<java.lang.Integer>(number_);
+          bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated int32 number = 5;</code>
        */
-      public java.util.List<Integer>
+      public java.util.List<java.lang.Integer>
           getNumberList() {
         return java.util.Collections.unmodifiableList(number_);
       }
@@ -2530,7 +2466,7 @@ public final class RouletteProto {
        * <code>repeated int32 number = 5;</code>
        */
       public Builder addAllNumber(
-          Iterable<? extends Integer> values) {
+          java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureNumberIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, number_);
@@ -2542,7 +2478,7 @@ public final class RouletteProto {
        */
       public Builder clearNumber() {
         number_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2584,7 +2520,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<BetRequest> getParserForType() {
       return PARSER;
     }
@@ -2595,43 +2531,43 @@ public final class RouletteProto {
 
   }
 
-  public interface NewGameOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:NewGame)
+  public interface UpdateBettingStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:UpdateBettingStatus)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 id = 1;</code>
+     * <code>bool status = 1;</code>
      */
-    long getId();
+    boolean getStatus();
   }
   /**
-   * Protobuf type {@code NewGame}
+   * Protobuf type {@code UpdateBettingStatus}
    */
-  public  static final class NewGame extends
+  public  static final class UpdateBettingStatus extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:NewGame)
-      NewGameOrBuilder {
+      // @@protoc_insertion_point(message_implements:UpdateBettingStatus)
+      UpdateBettingStatusOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use NewGame.newBuilder() to construct.
-    private NewGame(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UpdateBettingStatus.newBuilder() to construct.
+    private UpdateBettingStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private NewGame() {
-      id_ = 0L;
+    private UpdateBettingStatus() {
+      status_ = false;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
-    private NewGame(
+    private UpdateBettingStatus(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -2653,7 +2589,7 @@ public final class RouletteProto {
             }
             case 8: {
 
-              id_ = input.readInt64();
+              status_ = input.readBool();
               break;
             }
           }
@@ -2670,23 +2606,23 @@ public final class RouletteProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return RouletteProto.internal_static_NewGame_descriptor;
+      return RouletteProto.internal_static_UpdateBettingStatus_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return RouletteProto.internal_static_NewGame_fieldAccessorTable
+      return RouletteProto.internal_static_UpdateBettingStatus_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              RouletteProto.NewGame.class, RouletteProto.NewGame.Builder.class);
+              RouletteProto.UpdateBettingStatus.class, RouletteProto.UpdateBettingStatus.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private long id_;
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private boolean status_;
     /**
-     * <code>int64 id = 1;</code>
+     * <code>bool status = 1;</code>
      */
-    public long getId() {
-      return id_;
+    public boolean getStatus() {
+      return status_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2701,8 +2637,8 @@ public final class RouletteProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0L) {
-        output.writeInt64(1, id_);
+      if (status_ != false) {
+        output.writeBool(1, status_);
       }
       unknownFields.writeTo(output);
     }
@@ -2712,110 +2648,110 @@ public final class RouletteProto {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0L) {
+      if (status_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, id_);
+          .computeBoolSize(1, status_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof RouletteProto.NewGame)) {
+      if (!(obj instanceof RouletteProto.UpdateBettingStatus)) {
         return super.equals(obj);
       }
-      RouletteProto.NewGame other = (RouletteProto.NewGame) obj;
+      RouletteProto.UpdateBettingStatus other = (RouletteProto.UpdateBettingStatus) obj;
 
       boolean result = true;
-      result = result && (getId()
-          == other.getId());
+      result = result && (getStatus()
+          == other.getStatus());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getId());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStatus());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static RouletteProto.NewGame parseFrom(byte[] data)
+    public static RouletteProto.UpdateBettingStatus parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static RouletteProto.NewGame parseFrom(java.io.InputStream input)
+    public static RouletteProto.UpdateBettingStatus parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static RouletteProto.NewGame parseDelimitedFrom(java.io.InputStream input)
+    public static RouletteProto.UpdateBettingStatus parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static RouletteProto.NewGame parseDelimitedFrom(
+    public static RouletteProto.UpdateBettingStatus parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static RouletteProto.NewGame parseFrom(
+    public static RouletteProto.UpdateBettingStatus parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2827,7 +2763,7 @@ public final class RouletteProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(RouletteProto.NewGame prototype) {
+    public static Builder newBuilder(RouletteProto.UpdateBettingStatus prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -2835,38 +2771,38 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     /**
-     * Protobuf type {@code NewGame}
+     * Protobuf type {@code UpdateBettingStatus}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:NewGame)
-        RouletteProto.NewGameOrBuilder {
+        // @@protoc_insertion_point(builder_implements:UpdateBettingStatus)
+        RouletteProto.UpdateBettingStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return RouletteProto.internal_static_NewGame_descriptor;
+        return RouletteProto.internal_static_UpdateBettingStatus_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return RouletteProto.internal_static_NewGame_fieldAccessorTable
+        return RouletteProto.internal_static_UpdateBettingStatus_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                RouletteProto.NewGame.class, RouletteProto.NewGame.Builder.class);
+                RouletteProto.UpdateBettingStatus.class, RouletteProto.UpdateBettingStatus.Builder.class);
       }
 
-      // Construct using RouletteProto.NewGame.newBuilder()
+      // Construct using RouletteProto.UpdateBettingStatus.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2877,31 +2813,31 @@ public final class RouletteProto {
       }
       public Builder clear() {
         super.clear();
-        id_ = 0L;
+        status_ = false;
 
         return this;
       }
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return RouletteProto.internal_static_NewGame_descriptor;
+        return RouletteProto.internal_static_UpdateBettingStatus_descriptor;
       }
 
-      public RouletteProto.NewGame getDefaultInstanceForType() {
-        return RouletteProto.NewGame.getDefaultInstance();
+      public RouletteProto.UpdateBettingStatus getDefaultInstanceForType() {
+        return RouletteProto.UpdateBettingStatus.getDefaultInstance();
       }
 
-      public RouletteProto.NewGame build() {
-        RouletteProto.NewGame result = buildPartial();
+      public RouletteProto.UpdateBettingStatus build() {
+        RouletteProto.UpdateBettingStatus result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public RouletteProto.NewGame buildPartial() {
-        RouletteProto.NewGame result = new RouletteProto.NewGame(this);
-        result.id_ = id_;
+      public RouletteProto.UpdateBettingStatus buildPartial() {
+        RouletteProto.UpdateBettingStatus result = new RouletteProto.UpdateBettingStatus(this);
+        result.status_ = status_;
         onBuilt();
         return result;
       }
@@ -2911,7 +2847,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2924,27 +2860,27 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RouletteProto.NewGame) {
-          return mergeFrom((RouletteProto.NewGame)other);
+        if (other instanceof RouletteProto.UpdateBettingStatus) {
+          return mergeFrom((RouletteProto.UpdateBettingStatus)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RouletteProto.NewGame other) {
-        if (other == RouletteProto.NewGame.getDefaultInstance()) return this;
-        if (other.getId() != 0L) {
-          setId(other.getId());
+      public Builder mergeFrom(RouletteProto.UpdateBettingStatus other) {
+        if (other == RouletteProto.UpdateBettingStatus.getDefaultInstance()) return this;
+        if (other.getStatus() != false) {
+          setStatus(other.getStatus());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2959,11 +2895,11 @@ public final class RouletteProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        RouletteProto.NewGame parsedMessage = null;
+        RouletteProto.UpdateBettingStatus parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RouletteProto.NewGame) e.getUnfinishedMessage();
+          parsedMessage = (RouletteProto.UpdateBettingStatus) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2973,28 +2909,28 @@ public final class RouletteProto {
         return this;
       }
 
-      private long id_ ;
+      private boolean status_ ;
       /**
-       * <code>int64 id = 1;</code>
+       * <code>bool status = 1;</code>
        */
-      public long getId() {
-        return id_;
+      public boolean getStatus() {
+        return status_;
       }
       /**
-       * <code>int64 id = 1;</code>
+       * <code>bool status = 1;</code>
        */
-      public Builder setId(long value) {
-
-        id_ = value;
+      public Builder setStatus(boolean value) {
+        
+        status_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 id = 1;</code>
+       * <code>bool status = 1;</code>
        */
-      public Builder clearId() {
-
-        id_ = 0L;
+      public Builder clearStatus() {
+        
+        status_ = false;
         onChanged();
         return this;
       }
@@ -3009,39 +2945,39 @@ public final class RouletteProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:NewGame)
+      // @@protoc_insertion_point(builder_scope:UpdateBettingStatus)
     }
 
-    // @@protoc_insertion_point(class_scope:NewGame)
-    private static final RouletteProto.NewGame DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:UpdateBettingStatus)
+    private static final RouletteProto.UpdateBettingStatus DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new RouletteProto.NewGame();
+      DEFAULT_INSTANCE = new RouletteProto.UpdateBettingStatus();
     }
 
-    public static RouletteProto.NewGame getDefaultInstance() {
+    public static RouletteProto.UpdateBettingStatus getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<NewGame>
-        PARSER = new com.google.protobuf.AbstractParser<NewGame>() {
-      public NewGame parsePartialFrom(
+    private static final com.google.protobuf.Parser<UpdateBettingStatus>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateBettingStatus>() {
+      public UpdateBettingStatus parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NewGame(input, extensionRegistry);
+        return new UpdateBettingStatus(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<NewGame> parser() {
+    public static com.google.protobuf.Parser<UpdateBettingStatus> parser() {
       return PARSER;
     }
 
-    @Override
-    public com.google.protobuf.Parser<NewGame> getParserForType() {
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateBettingStatus> getParserForType() {
       return PARSER;
     }
 
-    public RouletteProto.NewGame getDefaultInstanceForType() {
+    public RouletteProto.UpdateBettingStatus getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3052,11 +2988,6 @@ public final class RouletteProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 game_id = 1;</code>
-     */
-    long getGameId();
-
-    /**
      * <code>int32 number = 2;</code>
      */
     int getNumber();
@@ -3064,7 +2995,7 @@ public final class RouletteProto {
     /**
      * <code>string color = 3;</code>
      */
-    String getColor();
+    java.lang.String getColor();
     /**
      * <code>string color = 3;</code>
      */
@@ -3084,12 +3015,11 @@ public final class RouletteProto {
       super(builder);
     }
     private NewResult() {
-      gameId_ = 0L;
       number_ = 0;
       color_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3100,7 +3030,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -3120,18 +3050,13 @@ public final class RouletteProto {
               }
               break;
             }
-            case 8: {
-
-              gameId_ = input.readInt64();
-              break;
-            }
             case 16: {
 
               number_ = input.readInt32();
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               color_ = s;
               break;
@@ -3153,20 +3078,11 @@ public final class RouletteProto {
       return RouletteProto.internal_static_NewResult_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_NewResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               RouletteProto.NewResult.class, RouletteProto.NewResult.Builder.class);
-    }
-
-    public static final int GAME_ID_FIELD_NUMBER = 1;
-    private long gameId_;
-    /**
-     * <code>int64 game_id = 1;</code>
-     */
-    public long getGameId() {
-      return gameId_;
     }
 
     public static final int NUMBER_FIELD_NUMBER = 2;
@@ -3179,18 +3095,18 @@ public final class RouletteProto {
     }
 
     public static final int COLOR_FIELD_NUMBER = 3;
-    private volatile Object color_;
+    private volatile java.lang.Object color_;
     /**
      * <code>string color = 3;</code>
      */
-    public String getColor() {
-      Object ref = color_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getColor() {
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         color_ = s;
         return s;
       }
@@ -3200,11 +3116,11 @@ public final class RouletteProto {
      */
     public com.google.protobuf.ByteString
         getColorBytes() {
-      Object ref = color_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
+      java.lang.Object ref = color_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         color_ = b;
         return b;
       } else {
@@ -3224,9 +3140,6 @@ public final class RouletteProto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (gameId_ != 0L) {
-        output.writeInt64(1, gameId_);
-      }
       if (number_ != 0) {
         output.writeInt32(2, number_);
       }
@@ -3241,10 +3154,6 @@ public final class RouletteProto {
       if (size != -1) return size;
 
       size = 0;
-      if (gameId_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, gameId_);
-      }
       if (number_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, number_);
@@ -3257,8 +3166,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -3268,8 +3177,6 @@ public final class RouletteProto {
       RouletteProto.NewResult other = (RouletteProto.NewResult) obj;
 
       boolean result = true;
-      result = result && (getGameId()
-          == other.getGameId());
       result = result && (getNumber()
           == other.getNumber());
       result = result && getColor()
@@ -3278,16 +3185,13 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GAME_ID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getGameId());
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getNumber();
       hash = (37 * hash) + COLOR_FIELD_NUMBER;
@@ -3379,9 +3283,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3397,7 +3301,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_NewResult_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_NewResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3410,7 +3314,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3421,8 +3325,6 @@ public final class RouletteProto {
       }
       public Builder clear() {
         super.clear();
-        gameId_ = 0L;
-
         number_ = 0;
 
         color_ = "";
@@ -3449,7 +3351,6 @@ public final class RouletteProto {
 
       public RouletteProto.NewResult buildPartial() {
         RouletteProto.NewResult result = new RouletteProto.NewResult(this);
-        result.gameId_ = gameId_;
         result.number_ = number_;
         result.color_ = color_;
         onBuilt();
@@ -3461,7 +3362,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3474,12 +3375,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3493,9 +3394,6 @@ public final class RouletteProto {
 
       public Builder mergeFrom(RouletteProto.NewResult other) {
         if (other == RouletteProto.NewResult.getDefaultInstance()) return this;
-        if (other.getGameId() != 0L) {
-          setGameId(other.getGameId());
-        }
         if (other.getNumber() != 0) {
           setNumber(other.getNumber());
         }
@@ -3530,32 +3428,6 @@ public final class RouletteProto {
         return this;
       }
 
-      private long gameId_ ;
-      /**
-       * <code>int64 game_id = 1;</code>
-       */
-      public long getGameId() {
-        return gameId_;
-      }
-      /**
-       * <code>int64 game_id = 1;</code>
-       */
-      public Builder setGameId(long value) {
-
-        gameId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 game_id = 1;</code>
-       */
-      public Builder clearGameId() {
-
-        gameId_ = 0L;
-        onChanged();
-        return this;
-      }
-
       private int number_ ;
       /**
        * <code>int32 number = 2;</code>
@@ -3567,7 +3439,7 @@ public final class RouletteProto {
        * <code>int32 number = 2;</code>
        */
       public Builder setNumber(int value) {
-
+        
         number_ = value;
         onChanged();
         return this;
@@ -3576,26 +3448,26 @@ public final class RouletteProto {
        * <code>int32 number = 2;</code>
        */
       public Builder clearNumber() {
-
+        
         number_ = 0;
         onChanged();
         return this;
       }
 
-      private Object color_ = "";
+      private java.lang.Object color_ = "";
       /**
        * <code>string color = 3;</code>
        */
-      public String getColor() {
-        Object ref = color_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getColor() {
+        java.lang.Object ref = color_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           color_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3603,11 +3475,11 @@ public final class RouletteProto {
        */
       public com.google.protobuf.ByteString
           getColorBytes() {
-        Object ref = color_;
+        java.lang.Object ref = color_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           color_ = b;
           return b;
         } else {
@@ -3618,11 +3490,11 @@ public final class RouletteProto {
        * <code>string color = 3;</code>
        */
       public Builder setColor(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         color_ = value;
         onChanged();
         return this;
@@ -3631,7 +3503,7 @@ public final class RouletteProto {
        * <code>string color = 3;</code>
        */
       public Builder clearColor() {
-
+        
         color_ = getDefaultInstance().getColor();
         onChanged();
         return this;
@@ -3645,7 +3517,7 @@ public final class RouletteProto {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         color_ = value;
         onChanged();
         return this;
@@ -3688,7 +3560,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<NewResult> getParserForType() {
       return PARSER;
     }
@@ -3730,7 +3602,7 @@ public final class RouletteProto {
       amount_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3741,7 +3613,7 @@ public final class RouletteProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -3788,7 +3660,7 @@ public final class RouletteProto {
       return RouletteProto.internal_static_PlayerAmountUpdate_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return RouletteProto.internal_static_PlayerAmountUpdate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
@@ -3852,8 +3724,8 @@ public final class RouletteProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -3871,7 +3743,7 @@ public final class RouletteProto {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3970,9 +3842,9 @@ public final class RouletteProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3988,7 +3860,7 @@ public final class RouletteProto {
         return RouletteProto.internal_static_PlayerAmountUpdate_descriptor;
       }
 
-      protected FieldAccessorTable
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return RouletteProto.internal_static_PlayerAmountUpdate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4001,7 +3873,7 @@ public final class RouletteProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4049,7 +3921,7 @@ public final class RouletteProto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4062,12 +3934,12 @@ public final class RouletteProto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4125,7 +3997,7 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder setPlayerId(long value) {
-
+        
         playerId_ = value;
         onChanged();
         return this;
@@ -4134,7 +4006,7 @@ public final class RouletteProto {
        * <code>int64 player_id = 1;</code>
        */
       public Builder clearPlayerId() {
-
+        
         playerId_ = 0L;
         onChanged();
         return this;
@@ -4151,7 +4023,7 @@ public final class RouletteProto {
        * <code>int32 amount = 2;</code>
        */
       public Builder setAmount(int value) {
-
+        
         amount_ = value;
         onChanged();
         return this;
@@ -4160,7 +4032,7 @@ public final class RouletteProto {
        * <code>int32 amount = 2;</code>
        */
       public Builder clearAmount() {
-
+        
         amount_ = 0;
         onChanged();
         return this;
@@ -4203,7 +4075,7 @@ public final class RouletteProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<PlayerAmountUpdate> getParserForType() {
       return PARSER;
     }
@@ -4216,37 +4088,37 @@ public final class RouletteProto {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NewPlayerRequest_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_NewPlayerRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NewPlayerResponse_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_NewPlayerResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_BuyInRequest_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_BuyInRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_BetRequest_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_BetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_NewGame_descriptor;
-  private static final
+    internal_static_UpdateBettingStatus_descriptor;
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_NewGame_fieldAccessorTable;
+      internal_static_UpdateBettingStatus_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_NewResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_NewResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_PlayerAmountUpdate_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_PlayerAmountUpdate_fieldAccessorTable;
 
@@ -4257,25 +4129,25 @@ public final class RouletteProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\016roulette.proto\" \n\020NewPlayerRequest\022\014\n\004" +
       "name\030\001 \001(\t\"\037\n\021NewPlayerResponse\022\n\n\002id\030\001 " +
       "\001(\003\"1\n\014BuyInRequest\022\021\n\tplayer_id\030\001 \001(\003\022\016" +
-      "\n\006amount\030\002 \001(\005\"\222\003\n\nBetRequest\022\021\n\tplayer_" +
-      "id\030\001 \001(\003\022\017\n\007game_id\030\002 \001(\003\022\016\n\006amount\030\003 \001(" +
-      "\005\022!\n\004type\030\004 \001(\0162\023.BetRequest.BetType\022\016\n\006" +
-      "number\030\005 \003(\005\"\234\002\n\007BetType\022\007\n\003ODD\020\000\022\010\n\004EVE" +
-      "N\020\001\022\007\n\003RED\020\003\022\t\n\005BLACK\020\004\022\016\n\nFIRST_HALf\020\005\022" +
-      "\017\n\013SECOND_HALF\020\006\022\017\n\013FIRST_DOZEN\020\007\022\020\n\014SEC" +
-      "OND_DOZEN\020\010\022\017\n\013THIRD_DOZEN\020\t\022\020\n\014FIRST_CO" +
-      "LUMN\020\n\022\021\n\rSECOND_COLUMN\020\013\022\020\n\014THIRD_COLUM" +
-      "N\020\014\022\n\n\006NUMBER\020\r\022\016\n\nTWO_NUMBER\020\016\022\020\n\014THREE" +
-      "_NUMBER\020\017\022\017\n\013FOUR_NUMBER\020\020\022\017\n\013FIVE_NUMBE" +
-      "R\020\021\022\016\n\nSIX_NUMBER\020\022\"\025\n\007NewGame\022\n\n\002id\030\001 \001" +
-      "(\003\";\n\tNewResult\022\017\n\007game_id\030\001 \001(\003\022\016\n\006numb" +
-      "er\030\002 \001(\005\022\r\n\005color\030\003 \001(\t\"7\n\022PlayerAmountU" +
-      "pdate\022\021\n\tplayer_id\030\001 \001(\003\022\016\n\006amount\030\002 \001(\005" +
-      "B\017B\rRouletteProtob\006proto3"
+      "\n\006amount\030\002 \001(\005\"\201\003\n\nBetRequest\022\021\n\tplayer_" +
+      "id\030\001 \001(\003\022\016\n\006amount\030\003 \001(\005\022!\n\004type\030\004 \001(\0162\023" +
+      ".BetRequest.BetType\022\016\n\006number\030\005 \003(\005\"\234\002\n\007" +
+      "BetType\022\007\n\003ODD\020\000\022\010\n\004EVEN\020\001\022\007\n\003RED\020\003\022\t\n\005B" +
+      "LACK\020\004\022\016\n\nFIRST_HALf\020\005\022\017\n\013SECOND_HALF\020\006\022" +
+      "\017\n\013FIRST_DOZEN\020\007\022\020\n\014SECOND_DOZEN\020\010\022\017\n\013TH" +
+      "IRD_DOZEN\020\t\022\020\n\014FIRST_COLUMN\020\n\022\021\n\rSECOND_" +
+      "COLUMN\020\013\022\020\n\014THIRD_COLUMN\020\014\022\n\n\006NUMBER\020\r\022\016" +
+      "\n\nTWO_NUMBER\020\016\022\020\n\014THREE_NUMBER\020\017\022\017\n\013FOUR" +
+      "_NUMBER\020\020\022\017\n\013FIVE_NUMBER\020\021\022\016\n\nSIX_NUMBER" +
+      "\020\022\"%\n\023UpdateBettingStatus\022\016\n\006status\030\001 \001(" +
+      "\010\"*\n\tNewResult\022\016\n\006number\030\002 \001(\005\022\r\n\005color\030" +
+      "\003 \001(\t\"7\n\022PlayerAmountUpdate\022\021\n\tplayer_id" +
+      "\030\001 \001(\003\022\016\n\006amount\030\002 \001(\005B\017B\rRouletteProtob" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4294,43 +4166,43 @@ public final class RouletteProto {
     internal_static_NewPlayerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NewPlayerRequest_descriptor,
-        new String[] { "Name", });
+        new java.lang.String[] { "Name", });
     internal_static_NewPlayerResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_NewPlayerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NewPlayerResponse_descriptor,
-        new String[] { "Id", });
+        new java.lang.String[] { "Id", });
     internal_static_BuyInRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_BuyInRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BuyInRequest_descriptor,
-        new String[] { "PlayerId", "Amount", });
+        new java.lang.String[] { "PlayerId", "Amount", });
     internal_static_BetRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_BetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BetRequest_descriptor,
-        new String[] { "PlayerId", "GameId", "Amount", "Type", "Number", });
-    internal_static_NewGame_descriptor =
+        new java.lang.String[] { "PlayerId", "Amount", "Type", "Number", });
+    internal_static_UpdateBettingStatus_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_NewGame_fieldAccessorTable = new
+    internal_static_UpdateBettingStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_NewGame_descriptor,
-        new String[] { "Id", });
+        internal_static_UpdateBettingStatus_descriptor,
+        new java.lang.String[] { "Status", });
     internal_static_NewResult_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_NewResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_NewResult_descriptor,
-        new String[] { "GameId", "Number", "Color", });
+        new java.lang.String[] { "Number", "Color", });
     internal_static_PlayerAmountUpdate_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_PlayerAmountUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerAmountUpdate_descriptor,
-        new String[] { "PlayerId", "Amount", });
+        new java.lang.String[] { "PlayerId", "Amount", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
