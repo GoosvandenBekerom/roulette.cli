@@ -25,6 +25,7 @@ class ProtoMessageConverter : AbstractMessageConverter() {
             NewPlayerResponse::class.java.simpleName -> NewPlayerResponse.parseFrom(message.body)
             NewResult::class.java.simpleName -> NewResult.parseFrom(message.body)
             PlayerAmountUpdate::class.java.simpleName -> PlayerAmountUpdate.parseFrom(message.body)
+            Error::class.java.simpleName -> Error.parseFrom(message.body)
             else -> throw UnsupportedMessageException(message)
         }
     }

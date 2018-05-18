@@ -22,11 +22,15 @@ class Client {
         val body = NewPlayerRequest.newBuilder()
         body.name = username
         println("Requesting registration for $username...")
-        val response = request(body.build()) as NewPlayerResponse
+        val response = request(body.build())
 
-        state.connectPlayer(response.id)
-
-        println("Successfully registered and connected $username with player id: ${state.playerId}")
+        when(response) {
+            is NewPlayerResponse -> {
+                state.connectPlayer(response.id)
+                println("Successfully registered and connected $username with player id: ${state.playerId}")
+            }
+            is Error -> handleError(response)
+        }
     }
 
     @ShellMethod("Buy some chips to bet on games")
@@ -35,11 +39,15 @@ class Client {
         body.playerId = state.playerId
         body.amount = amount
         println("Requesting buy-in for $amount chips")
-        val response = request(body.build()) as PlayerAmountUpdate
 
-        state.chipAmount = response.amount
-
-        println("Buy-in successful. new chip amount = ${state.chipAmount}")
+        val response = request(body.build())
+        when(response) {
+            is PlayerAmountUpdate -> {
+                state.chipAmount = response.amount
+                println("Buy-in successful. new chip amount = ${state.chipAmount}")
+            }
+            is Error -> handleError(response)
+        }
     }
 
     @ShellMethod("Bet on a game")
@@ -67,11 +75,15 @@ class Client {
             body.addAllNumber(numbers)
         }
         println("Betting $amount on ${type::class.simpleName}")
-        val response = request(body.build()) as PlayerAmountUpdate
 
-        state.chipAmount = response.amount
-
-        println("Bet successful. new chip amount = ${state.chipAmount}")
+        val response = request(body.build())
+        when(response) {
+            is PlayerAmountUpdate -> {
+                state.chipAmount = response.amount
+                println("Bet successful. new chip amount = ${state.chipAmount}")
+            }
+            is Error -> handleError(response)
+        }
     }
 
     // ======================
@@ -100,6 +112,10 @@ class Client {
 
     private fun playerConnected(): Boolean {
         return state.playerId > -1
+    }
+
+    private fun handleError(error: Error) {
+        println("Error: ${error.message}")
     }
 
     private fun betTypeToProto(type: BetType): BetRequest.BetType {
