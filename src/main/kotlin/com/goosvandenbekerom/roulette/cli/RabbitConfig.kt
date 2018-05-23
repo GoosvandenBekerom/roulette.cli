@@ -1,14 +1,15 @@
 package com.goosvandenbekerom.roulette.cli
 
-import org.springframework.amqp.core.FanoutExchange
-import org.springframework.amqp.core.HeadersExchange
-import org.springframework.amqp.core.TopicExchange
-import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory
+import org.springframework.amqp.core.*
+import org.springframework.amqp.core.Queue
 import org.springframework.amqp.rabbit.connection.ConnectionFactory
+import org.springframework.amqp.rabbit.core.RabbitAdmin
 import org.springframework.amqp.rabbit.core.RabbitTemplate
-import org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer
+import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer
+import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import java.util.*
 
 @Configuration
 class RabbitConfig {
@@ -29,7 +30,16 @@ class RabbitConfig {
     fun headersExchange() = HeadersExchange(headersExchangeName)
 
     @Bean
+    fun queue() = Queue(UUID.randomUUID().toString(), false, true, true)
+
+    @Bean
+    fun binding(queue: Queue) = BindingBuilder.bind(queue).to(fanoutExchange())!!
+
+    @Bean
     fun protoMessageConverter() = ProtoMessageConverter()
+
+    @Bean
+    fun rabbitAdmin(cf: ConnectionFactory) = RabbitAdmin(cf)
 
     @Bean
     fun rabbitTemplate(cf: ConnectionFactory): RabbitTemplate {
@@ -39,10 +49,14 @@ class RabbitConfig {
     }
 
     @Bean
-    fun listenerFactory(cf: ConnectionFactory, configurer: SimpleRabbitListenerContainerFactoryConfigurer): SimpleRabbitListenerContainerFactory {
-        val factory = SimpleRabbitListenerContainerFactory()
-        configurer.configure(factory, cf)
-        factory.setMessageConverter(protoMessageConverter())
-        return factory
+    fun container(cf: ConnectionFactory, adapter: MessageListenerAdapter, queue:Queue) : SimpleMessageListenerContainer {
+        val container = SimpleMessageListenerContainer()
+        container.connectionFactory = cf
+        container.setQueueNames(queue.name)
+        container.messageListener = adapter
+        return container
     }
+
+    @Bean
+    fun listenerAdapter(handler: MessageHandler) : MessageListenerAdapter = MessageListenerAdapter(handler, protoMessageConverter())
 }
