@@ -1,11 +1,12 @@
 package com.goosvandenbekerom.roulette.cli
 
-import org.springframework.stereotype.Component
+import com.goosvandenbekerom.roulette.core.Result
 
-@Component
 class ClientState {
     var playerId: Long = -1
     var chipAmount = 0
+    var bettingOpen = false
+    val results = mutableSetOf<Result>()
 
     fun connectPlayer(id: Long) {
         playerId = id

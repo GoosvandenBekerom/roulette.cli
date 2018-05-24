@@ -1,4 +1,4 @@
-package com.goosvandenbekerom.roulette.cli
+package com.goosvandenbekerom.roulette.domain
 
 import com.google.protobuf.Message
 
