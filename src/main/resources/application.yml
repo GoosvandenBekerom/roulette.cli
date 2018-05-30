@@ -4,3 +4,6 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
+logging:
+  level:
+    root: error
